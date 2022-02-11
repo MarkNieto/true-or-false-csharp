@@ -74,11 +74,19 @@ namespace TrueOrFalse
         bool scoreResponse = responses[scoringIndex];
 
         //18.- Write out user response and correct answer for each answer in answers array.
-        Console.WriteLine(scoringIndex + 1 + ".");
-        Console.WriteLine($"Input: {scoreResponse} | Answer: {ans} ");
+        Console.Write(scoringIndex + 1 + ".");
+        Console.WriteLine($"Input: {scoreResponse} | Answer: {ans}" + ".");
         scoringIndex++;
+
+        //19.- Until inside the loop, we will use an if statement to compare the answers, and increment the score.
+        if(scoreResponse == ans){
+          score++;
+        }
+
       }
 
+      //20.- Announce the user's score
+      Console.WriteLine($"You got {score} out of {questions.Length} correct!");
     }
   }
 }
